@@ -1,22 +1,39 @@
 
 import './App.css';
-const user = {
-  name: "Ian",
-  position: "Lead Instructor",
-  hometown: "Suttons Bay, MI"
-}
+import Transaction from "./components/Transaction"
+import Transactions  from './components/TransactionsLists';
 
-const element = (
-  <ul id="about-me">
-    <li className="user">Name: {user.name}</li>
-    <li className="user">Position: {user.position}</li>
-    <li className="user">Hometown: {user.hometown}</li>
-   </ul>
-)
 
+
+ const planets = [
+  {name: "Mars", isGasPlanet: false},
+  {name: "Earth", isGasPlanet: false},
+  {name: "Jupiter", isGasPlanet: true},
+  {name: "Venus", isGasPlanet: false},
+  {name: "Neptune", isGasPlanet: true},
+  {name: "Uranus", isGasPlanet: true},
+ ]
+
+ 
 function App() {
+  // fetch("http://localhost:3000/transactions")
+  // .then((res)=> res.json())
+  // .then((data)=> {
+  //   console.log(data)
+  // })
+
+  
   return (
-    element
+   
+    
+    <>
+    
+    {planets.map((planet, key) => {
+    if (planet.isGasPlanet) return <h1>{planet.name}</h1>})}
+
+    <Transactions />
+    </>
+    
   )
 }
 

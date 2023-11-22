@@ -7,7 +7,7 @@ function Account() {
   const [transaction, setTransaction] = useState([])
   const [query, setQuery] = useState("")
   useEffect(() => {
-    fetch(" http://localhost:3000/transactions?q=" + query)
+    fetch("https://my-json-server.typicode.com/Njooro/Week1.Phase2/transactions?q=" + query)
       .then((resp) => resp.json())
       .then(transaction => setTransaction(transaction))
   }, [query])

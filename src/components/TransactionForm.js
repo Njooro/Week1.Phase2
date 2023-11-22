@@ -7,7 +7,7 @@ function TransactionForm() {
   const [category, setCategory] = useState("")
   const [amount, setAmount] = useState("")
   function handleSubmit(e) {
-    fetch(" http://localhost:3000/transactions", {
+    fetch("https://my-json-server.typicode.com/Njooro/Week1.Phase2/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
